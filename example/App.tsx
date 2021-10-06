@@ -1,9 +1,9 @@
 import React from "react";
-import { ViewStyle, SafeAreaView, Alert } from "react-native";
+import { ViewStyle, SafeAreaView } from "react-native";
 import Icon from "react-native-dynamic-vector-icons";
 import RoundedCheckboxGroup, {
   ICheckboxButton,
-} from "./lib/RoundedCheckboxGroup";
+} from "react-native-rounded-checkbox-group";
 
 const styles = {
   innerStyle: { height: 45, width: 45, borderRadius: 75 },
@@ -66,6 +66,7 @@ const App = () => {
         initial={2}
         onChange={(selectedItem: ICheckboxButton) => {
           setSelectedItem(selectedItem);
+          alert(selectedItem);
         }}
         component={(isActive: boolean) =>
           isActive && <Icon name="check" type="Entypo" color="#fff" />
