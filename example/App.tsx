@@ -1,9 +1,9 @@
 import React from "react";
-import { ViewStyle, SafeAreaView, Image, Text, View } from "react-native";
+import { ViewStyle, SafeAreaView } from "react-native";
 import Icon from "react-native-dynamic-vector-icons";
 import RoundedCheckboxGroup, {
   ICheckboxButton,
-} from "./build/dist/RoundedCheckboxGroup";
+} from "react-native-rounded-checkbox-group";
 
 const styles = {
   innerStyle: { height: 45, width: 45, borderRadius: 75 },
