@@ -1,6 +1,6 @@
 {
   "name": "react-native-rounded-checkbox-group",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fully customizable react native checkbox group for React Native",
   "main": "./build/dist/RoundedCheckboxGroup.js",
   "repository": "git@github.com:WrathChaos/react-native-rounded-checkbox-group.git",
