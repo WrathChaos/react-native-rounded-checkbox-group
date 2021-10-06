@@ -10,7 +10,7 @@
 
 <p align="center">
   <img alt="React Native Rounded Checkbox Group"
-        src="assets/Screenshots/typescript.jpg" />
+        src="assets/Screenshots/react-native-rounded-checkbox-group.gif" />
 </p>
 
 # Installation

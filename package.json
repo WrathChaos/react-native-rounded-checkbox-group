@@ -1,14 +1,18 @@
 {
-  "name": "react-native-typescript-library-starter",
-  "version": "1.0.5",
-  "description": "Extremely easy to create a React Native Component Library with both Stateful and Functional Component Examples.",
-  "main": "./build/dist/index.js",
-  "repository": "git@github.com:WrathChaos/react-native-typescript-library-starter.git",
+  "name": "react-native-rounded-checkbox-group",
+  "version": "0.1.0",
+  "description": "Fully customizable react native checkbox group for React Native",
+  "main": "./build/dist/RoundedCheckboxGroup.js",
+  "repository": "git@github.com:WrathChaos/react-native-rounded-checkbox-group.git",
   "author": "FreakyCoder <kurayogun@gmail.com>",
   "license": "MIT",
   "homepage": "https://www.freakycoder.com",
-  "bugs": "https://github.com/WrathChaos/react-native-typescript-library-starter/issues",
+  "bugs": "https://github.com/WrathChaos/react-native-rounded-checkbox-group/issues",
   "keywords": [
+    "checkbox",
+    "checkbox-group",
+    "rounded",
+    "customizable",
     "FreakyCoder",
     "freakycoder",
     "kuray",
@@ -27,8 +31,7 @@
     "postversion": "git push && git push --tags"
   },
   "peerDependencies": {
-    "react": ">= 16.x.x",
-    "react-native": ">=0.63.x"
+    "react-native-rounded-checkbox": "^0.3.3"
   },
   "devDependencies": {
     "@types/react": "^16.9.53",
