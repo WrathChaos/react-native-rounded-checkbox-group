@@ -1,27 +1,62 @@
 import React from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { ViewStyle, SafeAreaView } from "react-native";
+import Icon from "react-native-dynamic-vector-icons";
 import RoundedCheckboxGroup, {
   ICheckboxButton,
 } from "./lib/RoundedCheckboxGroup";
 
 const styles = {
-  outerStyle: { height: 75, width: 75, borderRadius: 75 },
-  innerStyle: { height: 60, width: 60, borderRadius: 75 },
+  innerStyle: { height: 45, width: 45, borderRadius: 75 },
 };
+
+const _outerStyle = (borderColor: string): ViewStyle => ({
+  width: 55,
+  height: 55,
+  marginLeft: 16,
+  borderRadius: 60,
+  borderColor: borderColor,
+});
 
 const staticData: ICheckboxButton[] = [
   {
     id: 0,
-    checkedColor: "red",
-    outerStyle: styles.outerStyle,
+    text: "",
+    checkedColor: "#ff7473",
+    uncheckedColor: "#fbbfbb",
+    outerStyle: _outerStyle("#fbbfbb"),
     innerStyle: styles.innerStyle,
   },
-  { id: 1 },
-  { id: 2 },
-  { id: 3 },
+  {
+    id: 1,
+    text: "",
+    checkedColor: "#5567e9",
+    uncheckedColor: "#afb5f5",
+    outerStyle: _outerStyle("#afb5f5"),
+    innerStyle: styles.innerStyle,
+  },
+  {
+    id: 2,
+    text: "",
+    checkedColor: "#a98ae7",
+    uncheckedColor: "#cab6f4",
+    outerStyle: _outerStyle("#cab6f4"),
+    innerStyle: styles.innerStyle,
+  },
+  {
+    id: 3,
+    text: "",
+    checkedColor: "#fcb779",
+    uncheckedColor: "#ffd1a7",
+    outerStyle: _outerStyle("#ffd1a7"),
+    innerStyle: styles.innerStyle,
+  },
 ];
 
 const App = () => {
+  const [selectedItem, setSelectedItem] = React.useState<
+    ICheckboxButton | undefined
+  >(undefined);
+
   return (
     <SafeAreaView
       style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
@@ -30,8 +65,11 @@ const App = () => {
         data={staticData}
         initial={2}
         onChange={(selectedItem: ICheckboxButton) => {
-          console.log(JSON.stringify(selectedItem));
+          setSelectedItem(selectedItem);
         }}
+        component={(isActive: boolean) =>
+          isActive && <Icon name="check" type="Entypo" color="#fff" />
+        }
       />
     </SafeAreaView>
   );
